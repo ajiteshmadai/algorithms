@@ -10,5 +10,9 @@ public class RunLengthEncoderTest {
         RunLengthEncoder encoder =  new RunLengthEncoder();
         String output = encoder.encode(plainText);
         System.out.println(output);
+
+        plainText = "79239239232297777777777777777777777777777777777777777777";
+        output = encoder.encode(plainText);
+        System.out.println(output);
     }
 }
