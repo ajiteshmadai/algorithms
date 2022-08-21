@@ -1,8 +1,6 @@
 package com.ajiteshmadai.algorithm.searching;
 
-import java.util.List;
-
-public class LinearSearch<T> implements Search<T>{
+public class LinearSearch<T extends Comparable> implements Search<T>{
     @Override
     public int search(T[] words, T searchWord)  {
         int index = -1;
