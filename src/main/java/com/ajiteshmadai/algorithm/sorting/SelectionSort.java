@@ -17,7 +17,7 @@ public class SelectionSort<T extends Comparable> implements Sort<T> {
                 }
             }
         }
-        System.out.format("Sort completed in  %d interations for %d length array", interation, input.length);
+        System.out.format("Selection Sort completed in  %d interations for %d length array", interation, input.length);
         return input;
     }
 }

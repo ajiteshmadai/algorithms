@@ -5,19 +5,19 @@ public class BubbleSort<T extends Comparable> implements Sort<T> {
     @Override
     public T[] sort(T[] input) {
         T temp;
-        for(int i = 0; i < input.length - 1; i++) {
-            i = 0;
-            for(int j = i+1; j < input.length - 1 ; j++) {
-                if(input[i].compareTo(input[j]) > 0) {
-                    temp = input[i];
-                    input[i] = input[j];
-                    input[j] = temp;
+        int interation = 0;
+        for(int i = 0; i < input.length; i++) {
+            for(int j = 0; j <  input.length - 1 ; j++) {
+                interation++;
+                if(input[j].compareTo(input[j+1]) > 0) {
+                    temp = input[j];
+                    input[j] = input[j+1];
+                    input[j+1] = temp;
                 }
-                i++;
 
             }
-
         }
+        System.out.format("Bubble Sort completed in  %d interations for %d length array", interation, input.length);
         return input;
     }
 
