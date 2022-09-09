@@ -13,13 +13,16 @@ public class BinarySearch<T extends Comparable> implements Search<T>{
 
        int mid = (startIndex + endIndex) / 2;
         System.out.format("startIndex: %d,endIndex: %d, midIndex: %d, midValue: %d\n", startIndex, endIndex, mid, words[mid]);
-       if(searchWord.compareTo(words[mid]) < 0) {
-           return binarysearch(words, searchWord, startIndex, mid - 1);
-       } else if (searchWord.compareTo(words[mid]) > 0) {
-           return binarysearch(words, searchWord, mid + 1, endIndex);
-       } else {
-           return mid;
-       }
+        if(startIndex > endIndex) {
+            return -1;
+        } else if(searchWord.equals(words[mid])) {
+            return mid;
+        } else if (searchWord.compareTo(words[mid]) > 0) {
+            return binarysearch(words, searchWord, mid + 1, endIndex);
+        } else if (searchWord.compareTo(words[mid]) < 0 ){
+            return binarysearch(words, searchWord, startIndex, mid - 1);
+        }
+        return -1;
 
     }
 }

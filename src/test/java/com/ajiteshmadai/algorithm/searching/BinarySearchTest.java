@@ -18,6 +18,10 @@ public class BinarySearchTest {
         assertEquals(1, index);
 
 
+        arr = new Integer[]{6, 7, 8, 9, 10, 11, 12};
+        index = binarySearch.search(arr, 5);
+        assertEquals(-1, index);
+
 
     }
 }
